@@ -100,7 +100,7 @@ const MIDIExplorer = () => {
                   <div className="addressbar-ttl">アドレス(D)</div>
                   <div className="FakeSelect">
                     <div class="FakeSelect__children">
-                      README - Internet Explorer (WIP)
+                      http//www.cannon0074.com/main.html
                     </div>
                     <div class="FakeSelect__arrow"></div>
                   </div>
@@ -138,6 +138,7 @@ const MIDIExplorer = () => {
                     <MIDIAudio />
 
                     <div className="main-midi-ttl">【ending】</div>
+                    <div className="main-midi-ttl">【ds_01】</div>
                     <div className="main-midi-txt">
                       アドベンチャーゲーム★オンライン『迷宮』というブラウザゲームで使用されていた曲です。
                       <br />
@@ -167,6 +168,7 @@ const MIDIExplorer = () => {
                     <br />
                     悲しいけど時代の流れですね。
                     <br />
+                    時代の流れに逆らい、この音楽プレーヤーをプレーヤーらしく開発していきますので完成をお待ちください。
                   </div>
                 </div>
               </div>
