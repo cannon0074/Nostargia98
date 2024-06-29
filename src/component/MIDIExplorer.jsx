@@ -129,9 +129,9 @@ const MIDIExplorer = () => {
                   </div>
 
                   <div className="main-midi">
-                    <div className="main-midi-ttl">【seatofgm】</div>
+                    <div className="main-midi-ttl">【Seat of the Stardust】</div>
                     <div className="main-midi-txt">
-                      WWAというブラウザゲームで使用されていた曲です。
+                      WWAというブラウザゲーム作品のひとつで使用されていた曲です。
                       <br />
                       主人公が魚で海が舞台のゲームでしたがそれとマッチしており今でも思い出深い一曲です。
                     </div>
@@ -143,6 +143,8 @@ const MIDIExplorer = () => {
                       アドベンチャーゲーム★オンライン『迷宮』というブラウザゲームで使用されていた曲です。
                       <br />
                       PCの基本知識を使わせられたり、小さい自分にはとても難しく、とても楽しかったですね。今でも大好きなサイトです。
+                      <br />
+                      昔はゲーム音楽を耳コピしたものをサイトのコンテンツとして置いてあることが多々ありました。これもそのうちの一つでしょう。
                     </div>
                     <MIDIAudio2 />
                     <MIDIAudio3 />
