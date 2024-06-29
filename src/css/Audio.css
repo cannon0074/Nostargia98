@@ -1,0 +1,17 @@
+.playbutton {
+  border-top: 1px solid #ffffff;
+  border-left: 1px solid #ffffff;
+  border-right: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  box-shadow: -1px -1px #808080 inset, 1px 1px #dcdcdc inset;
+}
+
+.audiowrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spectrums {
+  width: 25%;
+}

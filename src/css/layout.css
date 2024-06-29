@@ -1,0 +1,408 @@
+.MenuBar {
+  display: flex;
+  padding: 0px;
+  font-size: 1rem;
+  position: relative;
+  overflow-y: visible;
+  z-index: 20;
+}
+.MenuBar > div {
+  position: relative;
+}
+.MenuBar > div > button {
+  padding: 0px 4px;
+  outline: none;
+  border: none;
+  user-select: none;
+  color: #0c0c0c;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0);
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: left;
+  padding: 3px 6px;
+  text-transform: capitalize;
+}
+.MenuBar > div > button + div,
+.MenuBar > div > button + div {
+  z-index: 20;
+  visibility: hidden;
+  position: absolute;
+  max-height: 0px;
+  top: 100%;
+  left: 0px;
+}
+@media (min-height: 720px) and (min-width: 960px) {
+  .MenuBar > div > button + div,
+  .MenuBar > div > button + div {
+    transition: max-height linear 750ms;
+  }
+}
+.MenuBar > div > button:hover {
+  box-shadow: inset -1px -1px 0px #808088, inset 1px 1px 0px #ffffff;
+}
+.MenuBar > div > button:active,
+.MenuBar > div > button:focus,
+.MenuBar > div > button:active:focus,
+.MenuBar > div > button.active,
+.MenuBar > div > button.clicked {
+  box-shadow: inset -1px -1px 0px #ffffff, inset 1px 1px 0px #808088;
+  padding: 4px 5px 2px 7px;
+}
+.MenuBar > div > button:active + div,
+.MenuBar > div > button:active + div,
+.MenuBar > div > button:focus + div,
+.MenuBar > div > button:focus + div,
+.MenuBar > div > button:active:focus + div,
+.MenuBar > div > button:active:focus + div,
+.MenuBar > div > button.active + div,
+.MenuBar > div > button.active + div,
+.MenuBar > div > button.clicked + div,
+.MenuBar > div > button.clicked + div {
+  visibility: visible;
+  max-height: 480px;
+}
+
+.w98 .Window__heading {
+  display: flex;
+  background: linear-gradient(to right, #0000a2, #126fc2);
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 1px;
+  padding: 0px 1px 0px 3px;
+  align-items: center;
+  letter-spacing: 1px;
+}
+.w98 .Window__heading button {
+  padding: 0px;
+  min-width: initial;
+  width: 16px;
+  height: 14px;
+  margin-left: 1px;
+  image-rendering: pixelated;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  background-repeat: no-repeat;
+  background-position: 1px 1px;
+}
+.w98 .Window__heading button:focus,
+.w98 .Window__heading button.clicked {
+  outline: none;
+  border: none;
+}
+.w98 .Window__heading button:active:focus,
+.w98 .Window__heading button.clicked {
+  padding: 2px 8px 1px 4px;
+  background-position: 2px 2px;
+}
+.w98 .Window__icon {
+  padding: 8px;
+  display: flex;
+  background-size: 14px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 4px;
+}
+.w98 .Window__title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-grow: 1;
+  min-width: 0px;
+  user-select: none;
+}
+.w98 .Window__close {
+  margin-left: 2px;
+  background-image: url("data:image/gif;base64,R0lGODlhDQALAJEAAAAAAP///////wAAACH5BAEAAAIALAAAAAANAAsAAAIUlI+pKwDoVGxvucmwvblqo33MqBQAOw==");
+}
+.w98 .Window__restore {
+  background-image: url("data:image/gif;base64,R0lGODlhDQALAJEAAAAAAP///////wAAACH5BAEAAAIALAAAAAANAAsAAAIZlI9pwK3SnAKI1kjtwTlpyHjV830b9qRHAQA7");
+}
+.w98 .Window__minimize {
+  background-image: url("data:image/gif;base64,R0lGODlhDQALAJEAAAAAAP///////wAAACH5BAEAAAIALAAAAAANAAsAAAIOlI+py+0PozSg2mXvFAUAOw==");
+}
+.w98 .Window__maximize {
+  background-image: url("data:image/gif;base64,R0lGODlhDQALAJEAAAAAAP///////wAAACH5BAEAAAIALAAAAAANAAsAAAIXlI8Jy4wNXzJAznqwsjtPoYFfCDXfWQAAOw==");
+}
+.w98 .Window__help {
+  background-image: url("data:image/gif;base64,R0lGODlhDQALAJEAAAAAAP///////wAAACH5BAEAAAIALAAAAAANAAsAAAIUlI9pwKDrBHtTxmcxvJTrn30VqBQAOw==");
+}
+.w98 .Window--resizable:after {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  height: 12px;
+  width: 12px;
+  content: "";
+  background-image: url("data:image/gif;base64,R0lGODlhDAAMAJEAAAAAAP///5mZmf///yH5BAEAAAMALAAAAAAMAAwAAAIbnI8TmSF83IMSKvFWw3dnHnFV+GVGhZZXmaoFADs=");
+}
+.w98 .Window--maximized {
+  width: 100%;
+  height: 100%;
+}
+.w98 .Window--drag {
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: inset -3px -3px 0px #808088, inset 3px 3px 0px #808088;
+}
+.w98 .Window--drag > *,
+.w98 .Window--drag:after {
+  filter: opacity(0.1%);
+}
+
+.w98 .WindowExplorer {
+  display: inline-flex;
+  flex-direction: column;
+}
+.w98 .WindowExplorer__view {
+  min-height: 20px;
+  margin: 2px 0px;
+  flex-grow: 1;
+  background-color: #ffffff;
+  box-shadow: inset -1px -1px 0px #ffffff, inset 1px 1px 0px 0px #808088,
+    inset -2px -2px 0px #bbc3c4, inset 2px 2px 0px 0px #0c0c0c;
+}
+.w98 .WindowExplorer__details {
+  display: flex;
+}
+.w98 .WindowExplorer__details__section {
+  box-shadow: inset -1px -1px 0px #ffffff, inset 1px 1px 0px #808088;
+  flex-grow: 1;
+  margin-top: 2px;
+  height: 16px;
+}
+.w98 .WindowExplorer__details__section:not(:last-child) {
+  margin: 2px;
+}
+.w98 .WindowExplorer .window__menu {
+  padding: 2px 2px 2px 12px;
+}
+.w98 .WindowExplorer > div + menu {
+  margin-top: 2px;
+  box-shadow: 0px 2px 0px -1px #ffffff, -1px 2px 0px -1px #ffffff,
+    -1px 1px 0px #808088, 0px 1px 0px #808088, inset 0px -1px 0px #808088,
+    inset -1px 0px 0px #808088, inset 0px 0px 0px 1px #ffffff,
+    -1px 0px 0px #808088, 1px 0px 0px #ffffff, -1px 1px 0px 0px #ffffff,
+    1px 1px 0px 0px #ffffff, -1px -1px 0px #808088, 0px -1px 0px #808088,
+    inset 0px 1px 0px #ffffff, 1px -1px 0px #ffffff;
+}
+.w98 .WindowExplorer > menu {
+  position: relative;
+  min-height: 22px;
+  padding-left: 12px;
+  margin: 0px 1px;
+  box-shadow: inset 0px -1px 0px #808088, inset -1px 0px 0px #808088,
+    inset 0px 0px 0px 1px #ffffff, -1px 0px 0px #808088, 1px 0px 0px #ffffff,
+    -1px 1px 0px 0px #ffffff, 1px 1px 0px 0px #ffffff;
+}
+.w98 .WindowExplorer > menu:before {
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  height: calc(100% - 6px);
+  width: 3px;
+  background-color: #bbc3c4;
+  content: "";
+  box-shadow: inset -1px -1px 0px #808088, inset 1px 1px 0px #ffffff;
+}
+.w98 .WindowExplorer > menu.OptionsList {
+  min-height: 40px;
+  display: block;
+}
+.w98 .WindowExplorer > footer {
+  display: flex;
+}
+.w98 .WindowExplorer > footer > div {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  min-width: 0px;
+  flex-grow: 1;
+  padding: 2px;
+  height: 12px;
+  box-shadow: inset -1px -1px 0px #ffffff, inset 1px 1px 0px #0c0c0c;
+}
+.w98 .WindowExplorer > footer > div:not(:last-child) {
+  margin-right: 2px;
+}
+.w98 .WindowExplorer > footer > div:last-child {
+  padding-right: 12px;
+}
+.w98 .WindowExplorer__address {
+  display: flex;
+  height: 26px;
+  overflow-y: visible;
+  user-select: none;
+}
+.w98 .WindowExplorer__address__title {
+  align-self: center;
+  margin-right: 4px;
+}
+.w98 .WindowExplorer__address .FakeSelect {
+  flex-grow: 1;
+  z-index: 5;
+  margin-right: 4px;
+}
+.w98 .WindowExplorer__options {
+  display: flex;
+  padding: 2px 8px 2px 12px;
+}
+.w98 .WindowExplorer > div:last-child {
+  margin-top: 2px;
+}
+
+.OptionsList {
+  display: block;
+  min-height: initial;
+  z-index: 10;
+}
+.OptionsList__large-icons {
+  display: flex;
+  overflow: hidden;
+}
+.OptionsList__dropdown {
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  height: calc(100% - 4px);
+}
+.OptionsList__dropdown--empty {
+  display: none;
+}
+.OptionsList__dropdown__button {
+  height: 100%;
+  border: none;
+  background-color: #bbc3c4;
+  background-image: url("data:image/gif;base64,R0lGODlhCAAFAJEAAAAAAP///////wAAACH5BAEAAAIALAAAAAAIAAUAAAIKBCSGebzqoJKtAAA7");
+  background-repeat: no-repeat;
+  background-position: 2px 3px;
+  padding: 0px 6px;
+  font-size: 0.7rem;
+  user-select: none;
+  letter-spacing: -2px;
+  display: flex;
+  flex-direction: column;
+}
+.OptionsList__dropdown__button:hover {
+  box-shadow: inset -1px -1px 0px #808088, inset 1px 1px 0px #ffffff;
+}
+.OptionsList__dropdown__button:active,
+.OptionsList__dropdown__button:focus,
+.OptionsList__dropdown__button:active:focus {
+  outline: none;
+  background-position: 3px 4px;
+  box-shadow: inset -1px -1px 0px #ffffff, inset 1px 1px 0px #808088;
+}
+.OptionsList__dropdown__button:active + .OptionsList__dropdown__list,
+.OptionsList__dropdown__button:focus + .OptionsList__dropdown__list,
+.OptionsList__dropdown__button:active:focus + .OptionsList__dropdown__list {
+  position: absolute;
+  top: 100%;
+  right: 0px;
+  display: block;
+  z-index: 10;
+}
+.OptionsList .OptionsList__dropdown__list {
+  display: none;
+}
+.OptionsList .OptionsList__dropdown__button {
+  margin-left: auto;
+}
+.OptionsList .StandardMenuItem__button:hover {
+  background-color: #0000a2;
+  color: #ffffff;
+}
+.OptionsList .divider {
+  border-left: 1px solid #808088;
+  border-right: 1px solid #ffffff;
+  width: 1px;
+  margin: 2px 3px;
+}
+.OptionsList .divider + .divider {
+  display: none;
+}
+
+.SelectBox {
+  position: relative;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 2px;
+}
+.SelectBox:disabled,
+.SelectBox.disabled {
+  pointer-events: none;
+  background-color: #bbc3c4;
+}
+.SelectBox:disabled > div,
+.SelectBox.disabled > div {
+  overflow: hidden;
+}
+.SelectBox:disabled button,
+.SelectBox.disabled button {
+  color: #808088 !important;
+}
+.SelectBox:disabled .icon,
+.SelectBox.disabled .icon {
+  filter: grayscale(1);
+}
+.SelectBox > div {
+  position: relative;
+  overflow: auto;
+}
+.SelectBox:after {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset -1px -1px 0px #ffffff, inset 1px 1px 0px 0px #808088,
+    inset -2px -2px 0px #bbc3c4, inset 2px 2px 0px 0px #0c0c0c;
+  pointer-events: none;
+  content: "";
+}
+.SelectBox button:not(.icon) {
+  display: block;
+  outline: none;
+  background: transparent;
+  border: none;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #0c0c0c;
+  width: 100%;
+  text-align: left;
+}
+.SelectBox button:not(.icon):after {
+  content: attr(title);
+  position: initial;
+}
+.SelectBox button:not(.icon).is-active {
+  background-color: #0000a2;
+  color: #ffffff;
+  outline-offset: -1px;
+  outline: 1px dotted #ffffff;
+}
+.SelectBox--ExplorerIcon > div {
+  display: flex;
+  flex-direction: row;
+  overflow-y: hidden;
+  padding-bottom: 20px;
+}
+.SelectBox--ExplorerIcon > div .explorer-icon {
+  margin: 2px 8px;
+}
+.SelectBox .icon--list {
+  margin: 0px;
+  padding: 1px;
+}
+.SelectBox .icon--list .icon__text {
+  width: initial;
+}
+.SelectBox .icon--list:focus:not(.is-active) .icon__text,
+.SelectBox .icon--list:active:not(.is-active) .icon__text {
+  background-color: transparent;
+  color: #0c0c0c;
+  outline: none;
+  outline-offset: -1px;
+}
