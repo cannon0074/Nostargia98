@@ -132,7 +132,7 @@ const MIDIExplorer = () => {
                       【Seat of the Stardust】
                     </div>
                     <div className="main-midi-txt">
-                      WWAというブラウザゲームで使用されていた曲です。
+                      WWAというブラウザゲーム作品のひとつで使用されていた曲です。
                       <br />
                       主人公が魚で海が舞台のゲームでしたがそれとマッチしており今でも思い出深い一曲です。
                     </div>
@@ -171,6 +171,7 @@ const MIDIExplorer = () => {
                     <br />
                     悲しいけど時代の流れですね。
                     <br />
+                    時代の流れに逆らい、この音楽プレーヤーをプレーヤーらしく開発していきますので完成をお待ちください。
                   </div>
                 </div>
               </div>
