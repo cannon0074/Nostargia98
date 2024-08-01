@@ -91,7 +91,7 @@
   display: flex;
 }
 
-.mini {
+.imitation3 {
   width: 3px;
   height: 16px;
   margin-top: 3px;
@@ -301,4 +301,17 @@
 .end-txt {
   margin-top: 100px;
   color: #ffff00;
+}
+
+.cat-mainview {
+  max-height: 100%;
+  padding-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.cat-button {
+  margin-top: 20px;
 }

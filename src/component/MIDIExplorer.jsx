@@ -17,7 +17,6 @@ import MIDIAudio from "./audio.jsx";
 import MIDIAudio2 from "./audio2.jsx";
 import MIDIAudio3 from "./audio3.jsx";
 import MIDIAudio4 from "./audio4.jsx";
-import MidiPlayer from "./midi.jsx";
 
 const MIDIExplorer = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -56,7 +55,7 @@ const MIDIExplorer = () => {
               </div>
               <div className="bar">
                 <div className="menubar">
-                  <div className="mini"></div>
+                  <div className="imitation3"></div>
                   <div className="menubar-button-wrap">
                     <button className="menubar-button">ファイル(F)</button>
                     <button className="menubar-button">編集(E)</button>
@@ -96,11 +95,11 @@ const MIDIExplorer = () => {
                   </div>
                 </div>
                 <div className="addressbar">
-                  <div className="mini"></div>
+                  <div className="imitation3"></div>
                   <div className="addressbar-ttl">アドレス(D)</div>
                   <div className="FakeSelect">
                     <div class="FakeSelect__children">
-                      README - Internet Explorer (WIP)
+                      http//www.cannon0074.com/main.html
                     </div>
                     <div class="FakeSelect__arrow"></div>
                   </div>
@@ -129,7 +128,9 @@ const MIDIExplorer = () => {
                   </div>
 
                   <div className="main-midi">
-                    <div className="main-midi-ttl">【seatofgm】</div>
+                    <div className="main-midi-ttl">
+                      【Seat of the Stardust】
+                    </div>
                     <div className="main-midi-txt">
                       WWAというブラウザゲームで使用されていた曲です。
                       <br />
@@ -138,10 +139,13 @@ const MIDIExplorer = () => {
                     <MIDIAudio />
 
                     <div className="main-midi-ttl">【ending】</div>
+                    <div className="main-midi-ttl">【ds_01】</div>
                     <div className="main-midi-txt">
                       アドベンチャーゲーム★オンライン『迷宮』というブラウザゲームで使用されていた曲です。
                       <br />
                       PCの基本知識を使わせられたり、小さい自分にはとても難しく、とても楽しかったですね。今でも大好きなサイトです。
+                      <br />
+                      昔はゲーム音楽を耳コピしたものをサイトのコンテンツとして置いてあることが多々ありました。これもそのうちの一つでしょう。
                     </div>
                     <MIDIAudio2 />
                     <MIDIAudio3 />
