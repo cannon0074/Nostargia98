@@ -6,25 +6,25 @@ import "../css/explorerstyle.css";
 import nekobackground from "../img/nekostanp.png";
 import Window from "../layout/Window.jsx";
 
-const CatEncounter = () => {
-  const [catUrl, setCatUrl] = useState("");
+const FoxShrine = () => {
+  const [foxUrl, setFoxUrl] = useState("");
 
-  const changeCatImage = () => {
-    fetch("https://api.thecatapi.com/v1/images/search")
+  const changeFoxImage = () => {
+    fetch("https://randomfox.ca/floof")
       .then((res) => {
         return res.json();
       })
-      .then((json) => setCatUrl(json[0].url));
+      .then((json) => setFoxUrl(json.image));
   };
 
   useEffect(() => {
-    changeCatImage();
+    changeFoxImage();
   }, []);
 
   return (
     <>
       <Window
-        title="Cat Encounter"
+        title="Fox Shrine"
         style={{ backgroundImage: `url(${nekobackground})` }}
       >
         {/* <Window></Window>で囲ってprops.childrenを使う */}
@@ -32,13 +32,13 @@ const CatEncounter = () => {
         <div className="app-mainview">
           <div className="main">
             <img
-              src={catUrl}
-              alt="猫の画像"
+              src={foxUrl}
+              alt="狐の画像"
               style={{ maxWidth: "500px", maxHeight: "300px" }}
             />
           </div>
           <div className="cat-button">
-            <button onClick={changeCatImage}>更新</button>
+            <button onClick={changeFoxImage}>更新</button>
           </div>
         </div>
       </Window>
@@ -46,4 +46,4 @@ const CatEncounter = () => {
   );
 };
 
-export default CatEncounter;
+export default FoxShrine;

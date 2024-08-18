@@ -5,6 +5,7 @@ import Import from "./img/import.png";
 import Cat from "./img/cat.png";
 import MIDIExplorer from "./component/MIDIExplorer.jsx";
 import CatEncounter from "./component/CatEncounter.jsx";
+import FoxShrine from "./component/FoxShrine.jsx";
 
 // import "./css/App.css";
 
@@ -34,7 +35,12 @@ const Desktop = () => {
   };
 
   const openCat = () => {
-    const newElement = <CatEncounter />;
+    const newElement = <CatEncounter copy />;
+    setElements([...elements, newElement]);
+  };
+
+  const openFox = () => {
+    const newElement = <FoxShrine />;
     setElements([...elements, newElement]);
   };
 
@@ -68,6 +74,18 @@ const Desktop = () => {
             />
             <button onDoubleClick={openCat} className="icon-name">
               Cat Encounter
+            </button>
+          </div>
+
+          <div className="icon" id="fox">
+            <img
+              onDoubleClick={openFox}
+              className="icon-img"
+              src={Cat}
+              alt="アイコン"
+            />
+            <button onDoubleClick={openFox} className="icon-name">
+              Fox Shrine
             </button>
           </div>
         </div>

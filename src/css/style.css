@@ -21,6 +21,10 @@ li {
   height: 100%;
 }
 
+.desktop {
+  position: relative;
+}
+
 .taskbar {
   width: 100%;
   position: absolute;
